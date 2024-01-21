@@ -1,0 +1,36 @@
+{
+  "title":"00.test",
+  "rules":[
+    {
+      "description": "00.test",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": { "key_code": "fn" },
+          "to": [
+            { "set_variable": { "name": "printscreen_key", "value": 1 } }
+          ],
+          "to_if_alone": [
+            { "shell_command": "screencapture ~/Desktop/screenshot-`date +%Y%m%d-%H%M%S`.png" }
+          ],
+          "to_after_key_up": [
+            { "set_variable": { "name": "printscreen_key", "value": 0 } }
+          ],
+          "conditions": [
+            { "type": "variable_if", "name": "printscreen_key", "value": 0 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": { "key_code": "p" },
+          "to": [
+            { "shell_command": "screencapture -P ~/Desktop/screenshot-`date +%Y%m%d-%H%M%S`.png" }
+          ],
+          "conditions": [
+            { "type": "variable_if", "name": "printscreen_key", "value": 1 }
+          ]
+        }
+      ]
+    }
+  ]
+}

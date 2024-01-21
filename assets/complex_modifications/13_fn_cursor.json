@@ -1,0 +1,90 @@
+{
+  "title":"13.cursor move with fn",
+  "rules":[
+    {
+      "description":"13/13. cursor (eisu & semicolon & J/K/i/l to home/bottom/top/end)",
+      "manipulators":[
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"j",
+            "modifiers":{
+              "mandatory":["fn"],
+              "optional":[
+                "shift",
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+           "to":[
+             {
+                "key_code":"left_arrow",
+                "modifiers":"command"
+              }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"k",
+            "modifiers":{
+              "mandatory":["fn"],
+              "optional":[
+                "caps_lock",
+                "shift",
+                "option"
+              ]
+            }
+          },
+          "to":[
+             {
+              "key_code":"down_arrow",
+              "modifiers":"command"
+              }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"i",
+            "modifiers":{
+              "mandatory":["fn"],
+              "optional":[
+                "caps_lock",
+                "shift",
+                "option"
+              ]
+            }
+          },
+          "to":[
+             {
+              "key_code":"up_arrow",
+              "modifiers":"command"
+              }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["fn"],
+              "optional": [
+                "caps_lock",
+                "shift",
+                "option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers":"command"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "title":"32.ime",
+  "rules":[
+    {
+      "description": "32/34.ime ( L-command/sd , r-command/lk  eisu, kana)",
+      "manipulators": [
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"left_command",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"left_command",
+              "lazy":true
+            }
+          ],
+          "to_if_alone":[
+            {
+              "key_code":"japanese_eisuu"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"right_command",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"right_command",
+              "lazy":true
+            }
+          ],
+          "to_if_alone":[
+            {
+              "key_code":"japanese_kana"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "l" },
+              { "key_code": "k" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"japanese_kana"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "s" },
+              { "key_code": "d" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"japanese_eisuu"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
