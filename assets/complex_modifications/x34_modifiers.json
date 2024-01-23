@@ -1,8 +1,8 @@
 {
-  "title":"34.modifiers no fn",
+  "title":"x34.modifiers",
   "rules":[
     {
-      "description": "34/34.modifiers no fn( eisu/kana/space/v/m/a to R_Control/R_Option/shift/option)",
+      "description": "34/34.modifiers ( eisu/kana/space/v/m/a to R_Control/R_Option/shift/option)",
       "manipulators": [
         { 
           "type": "basic",
@@ -71,6 +71,27 @@
           },
           "to_if_alone": [
             {"key_code": "return_or_enter"}
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ],
+              "optional": [
+                "shift",
+                "caps_lock",
+                "option"
+              ]
+            }
+          },
+          "to": [
+              {
+                  "key_code": "fn"
+              }
           ]
         }
       ]
