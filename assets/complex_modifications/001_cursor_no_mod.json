@@ -1,0 +1,454 @@
+{
+  "title":"001.cursor_test",
+  "rules":[
+    {
+      "description": "001.cursor_test",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code":"japanese_eisuu",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_control",
+              "lazy": true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "to_if_alone":[
+            {
+              "key_code":"spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers":{
+              "mandatory":"right_control"
+            }
+          },
+          "to": [
+            { 
+              "set_variable": {
+                 "name": "cursor_move",
+                  "value": 1,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code":"v",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0 
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers":{
+              "mandatory":"right_control"
+            }
+          },
+          "to": [
+            { 
+              "set_variable": {
+                 "name": "cursor_move",
+                  "value": 2,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code":"a",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers":{
+              "mandatory":"right_control"
+            }
+          },
+          "to": [
+            { 
+              "set_variable": {
+                 "name": "cursor_move",
+                  "value": 3,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+           "to": [
+            { 
+              "key_code":"left_arrow"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"shift"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"option"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 2 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 3 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+           "to": [
+            { 
+              "key_code":"left_arrow"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"shift"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"option"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 2 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 3 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+           "to": [
+            { 
+              "key_code":"left_arrow"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"shift"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"option"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 2 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 3 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+           "to": [
+            { 
+              "key_code":"left_arrow"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"shift"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"option"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 2 }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 3 }
+          ]
+        }
+      ]
+    }
+  ]
+}

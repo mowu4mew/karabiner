@@ -4710,115 +4710,33 @@
                 },
                 "rules": [
                     {
-                        "description": "001.cursor_test",
+                        "description": "00-1.test",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "japanese_eisuu",
+                                    "key_code": "v",
                                     "modifiers": {
-                                        "optional": [
-                                            "any"
+                                        "mandatory": [
+                                            "control"
                                         ]
                                     }
                                 },
                                 "parameters": {
-                                    "basic.to_if_alone_timeout_milliseconds": 200
+                                    "basic.to_if_held_down_threshold_milliseconds": 200
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "right_control",
-                                        "lazy": true
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "spacebar"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "cursor_move",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "v",
-                                    "modifiers": {
-                                        "mandatory": "right_control"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "key_up_value": 0,
-                                            "name": "cursor_move",
-                                            "value": 1
-                                        }
-                                    }
-                                ],
-                                "to_if_alone": [
+                                "to_after_key_up": [
                                     {
                                         "key_code": "v",
                                         "modifiers": "command"
                                     }
                                 ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
+                                "to_if_held_down": [
                                     {
-                                        "name": "cursor_move",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": "right_control"
-                                    }
-                                },
-                                "to": [
-                                    {
+                                        "halt": true,
                                         "set_variable": {
                                             "key_up_value": 0,
-                                            "name": "cursor_move",
-                                            "value": 2
-                                        }
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "a",
-                                        "modifiers": "command"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "cursor_move",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "mandatory": "right_control"
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "key_up_value": 0,
-                                            "name": "cursor_move",
-                                            "value": 3
+                                            "name": "sub_modifiers",
+                                            "value": 1
                                         }
                                     }
                                 ],
@@ -4827,94 +4745,17 @@
                             {
                                 "conditions": [
                                     {
-                                        "name": "cursor_move",
-                                        "type": "variable_if",
-                                        "value": 0
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "cursor_move",
+                                        "name": "sub_modifiers",
                                         "type": "variable_if",
                                         "value": 1
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
-                                    }
+                                    "key_code": "p"
                                 },
                                 "to": [
                                     {
-                                        "key_code": "left_arrow",
-                                        "modifiers": "shift"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "cursor_move",
-                                        "type": "variable_if",
-                                        "value": 2
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": "option"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "cursor_move",
-                                        "type": "variable_if",
-                                        "value": 3
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "right_control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_arrow",
-                                        "modifiers": "command"
+                                        "shell_command": "screencapture -P ~/Desktop/screenshot-`date +%Y%m%d-%H%M%S`.png"
                                     }
                                 ],
                                 "type": "basic"
@@ -5091,7 +4932,7 @@
                     ]
                 }
             ],
-            "name": "parameter_test",
+            "name": "New profile",
             "parameters": {
                 "delay_milliseconds_before_open_device": 1000
             },
