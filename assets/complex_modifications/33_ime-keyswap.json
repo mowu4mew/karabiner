@@ -1,8 +1,8 @@
 {
-  "title":"32.ime",
+  "title":"33/34.ime & keyswap",
   "rules":[
     {
-      "description": "32/34.ime ( L-command/sd , r-command/lk  eisu, kana)",
+      "description": "eisu / kana / tab / esc / print screen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' ",
       "manipulators": [
         {
           "type":"basic",
@@ -153,6 +153,24 @@
           "to":[
             {
               "key_code":"escape"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "w" },
+              { "key_code": "e" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"4",
+              "modifiers":["command","shift"]
             }
           ]
         }

@@ -1,8 +1,8 @@
 {
-  "title":"21.edit",
+  "title":"31/34.edit",
   "rules":[
     {
-      "description":"21/22.edit(Eisu + X/C/V/a/z/b/e/o to Cut/Copy/Paste/sel all/undo/redo/kill line/open line",
+      "description":"cut / copy / undo / redo / kill line /open line from Eisu & x / c / z / b / e / o",
       "manipulators":[
         {
           "type":"basic",
@@ -32,38 +32,6 @@
           "to":[
             {
               "key_code":"c",
-              "modifiers":["command"]
-            }
-          ]
-        },
-        {
-          "type":"basic",
-          "from" :{
-            "key_code":"v",
-            "modifiers":{
-              "mandatory":["right_control"],
-              "optional":["caps_lock"]
-            }
-          },
-          "to":[
-            {
-              "key_code":"v",
-              "modifiers":["command"]
-            }
-          ]
-        },
-        {
-          "type":"basic",
-          "from":{
-            "key_code":"a",
-            "modifiers":{
-              "mandatory":["right_control"],
-              "optional":["any"]
-            }
-          },
-          "to" :[
-            {
-              "key_code":"a",
               "modifiers":["command"]
             }
           ]

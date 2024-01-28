@@ -1,8 +1,8 @@
 {
-  "title":"22.command",
+  "title":"32/34.command",
   "rules":[
     {
-      "description":"22/22. command(Eisu + F/G/R/S/Q/W/R/T/N/command to find/replace/Save/Quit/Close/PrintScreen/New/Command",
+      "description":"find / replace / save / quit / close / new from 'Eisu & f / g / r / s / q / w / n '",
       "manipulators":[
         {
           "type":"basic",
@@ -102,24 +102,6 @@
         },
         {
           "type":"basic",
-          "from": {
-            "simultaneous": [
-              { "key_code": "w" },
-              { "key_code": "e" }
-            ],
-            "modifiers":{
-              "optional":["caps_lock"]
-            }
-          },
-          "to":[
-            {
-              "key_code":"4",
-              "modifiers":["command","shift"]
-            }
-          ]
-        },
-        {
-          "type":"basic",
           "from":{
             "key_code":"t",
             "modifiers":{
@@ -146,21 +128,6 @@
           "to":[
             {
               "key_code":"n",
-              "modifiers":["command"]
-            }
-          ]
-        },
-        {
-          "from":{
-            "key_code":"Left_control",
-            "modifiers":{
-              "mandatory":["right_control"],
-              "optional":["caps_lock"]
-            }
-          },
-          "to":[
-            {
-              "key_code":"",
               "modifiers":["command"]
             }
           ]
