@@ -5,6 +5,37 @@
 			"description":"04/04.symbol shift (Kana + shift + Z/X/C/comma/period/slash to grave/double quote/{/}/pipe)",
 			"manipulators":[
 				{
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers":{
+              "mandatory":"right_control"
+            }
+          },
+          "to": [
+            { 
+              "set_variable": {
+                 "name": "symbol_shift",
+                  "value": 1,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code":"v",
+              "modifiers":"command"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "symbol_shift",
+              "value": 0 
+            }
+          ]
+        },
+				{
 					"type":"basic",
 					"from": {
 						"key_code": "z",
