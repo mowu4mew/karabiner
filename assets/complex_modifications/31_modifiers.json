@@ -2,28 +2,8 @@
   "title":"31/31.modifiers",
   "rules":[
     {
-      "description": "R_Control / R_Option / param 1 or paste / param 2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
+      "description": "31/31.modifiers R_Control or eisuu / R_Option or kana / shift or space / param 1 or paste / param 2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
       "manipulators": [
-        { 
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar"            
-          },
-          "to": [
-            {
-              "key_code": "shift",
-              "lazy":true
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 200
-          },
-          "to_if_alone": [
-            {
-              "key_code": "spacebar"
-            }
-          ]
-        },
         {
           "type": "basic",
           "from": {
@@ -83,6 +63,29 @@
           },
           "to_if_alone": [
             {"key_code": "return_or_enter"}
+          ]
+        },
+        { 
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "lazy":true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
           ]
         },
         {

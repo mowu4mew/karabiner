@@ -2,7 +2,7 @@
   "title":"11/13.symbol top",
   "rules":[
 		{
-      "description":"!,@,#,$,%,^,&,*,+,= from Kana + Q,W,E,R,T,Y,U,I,O,P ",
+      "description":"11/13.symbol top !,@,#,$,%,^,&,*,+,= from Kana + Q,W,E,R,T,Y,U,I,O,P ",
       "manipulators":[
 				{
 					"type":"basic",

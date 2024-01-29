@@ -2,7 +2,7 @@
   "title":"22/24.cursor move option",
   "rules":[
     {
-      "description": "cursor move j / l / k / i / d / h with option",
+      "description": "22/24.cursor move with option j / l / k / i / d / h ",
       "manipulators": [
         {
           "type": "basic",

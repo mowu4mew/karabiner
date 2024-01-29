@@ -1,8 +1,8 @@
 {
-  "title":"32/34.command",
+  "title":"02/03.command",
   "rules":[
     {
-      "description":"find / replace / save / quit / close / new cut / copy / undo / redo / scroll up / scroll down / kill line /open line from from 'Eisu & f / g / r / s / q / w / n Eisu & x / c / z / b / o / m / e / period'",
+      "description":"02/03.command find / replace / save / quit / close / new cut / copy / undo / redo / scroll up / scroll down / kill line /open line from from 'Eisu & f / g / r / s / q / w / n Eisu & x / c / z / b / o / m / e / period'",
       "manipulators":[
         {
           "type":"basic",

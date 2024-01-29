@@ -2,7 +2,7 @@
   "title":"24/24.cursor move",
   "rules":[
     {
-      "description": "cursor move j / l / k / i / d / h",
+      "description": "24/24.cursor move j / l / k / i / d / h",
       "manipulators": [
         {
           "type": "basic",

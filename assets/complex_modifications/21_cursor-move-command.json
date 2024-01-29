@@ -2,7 +2,7 @@
   "title":"21/24.cursor move command",
   "rules":[
     {
-      "description": "cursor move j / l / k / i / d / h with command",
+      "description": "21/24.cursor move with command j / l / k / i / d / h ",
       "manipulators": [
         {
           "type": "basic",

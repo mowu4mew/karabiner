@@ -2,7 +2,7 @@
   "title":"13/13.symbol-shift",
   "rules":[
 		{
-			"description":"grave/double quote/{/}/pipe from Kana + shift + Z/X/C/comma/period/slash ",
+			"description":"13/13.symbol with shift  grave/double quote/{/}/pipe from Kana + shift + Z/X/C/comma/period/slash ",
 			"manipulators":[
 				{
           "type": "basic",
