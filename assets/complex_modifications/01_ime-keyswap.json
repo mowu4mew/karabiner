@@ -2,7 +2,7 @@
   "title":"33/34.ime & keyswap",
   "rules":[
     {
-      "description": "eisu / kana / tab / esc / print screen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' ",
+      "description": "eisu / kana / tab / esc / print screen / minus / hyphen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' / semicolon / &shift",
       "manipulators": [
         {
           "type":"basic",

@@ -1,8 +1,8 @@
 {
-  "title":"03.symbol-top",
+  "title":"11/13.symbol top",
   "rules":[
 		{
-      "description":"03/04. symbol top(Kana + Q,W,E,R,T,Y,U,I,O,P to !,@,#,$,%,^,&,*,+,= )",
+      "description":"!,@,#,$,%,^,&,*,+,= from Kana + Q,W,E,R,T,Y,U,I,O,P ",
       "manipulators":[
 				{
 					"type":"basic",

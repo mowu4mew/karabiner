@@ -1,8 +1,8 @@
 {
-  "title":"04.symbol-shift",
+  "title":"13/13.symbol-shift",
   "rules":[
 		{
-			"description":"04/04.symbol shift (Kana + shift + Z/X/C/comma/period/slash to grave/double quote/{/}/pipe)",
+			"description":"grave/double quote/{/}/pipe from Kana + shift + Z/X/C/comma/period/slash ",
 			"manipulators":[
 				{
           "type": "basic",

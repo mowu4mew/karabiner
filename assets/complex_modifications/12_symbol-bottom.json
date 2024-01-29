@@ -1,8 +1,8 @@
 {
-  "title":"02.Symbol-bottom",
+  "title":"12/13.Symbol-bottom",
   "rules":[
 		{
-			"description":"02/04.symbol( Kana + Z/X/C/V/B/N/M/comma/period/slash to tilda/quote/[/(/)/]/semicolon/]/back slash",
+			"description":"tilda/quote/[/(/)/]/semicolon/]/back slash from Kana + Z/X/C/V/B/N/M/comma/period/slash to tilda/quote/[/(/)/]/semicolon/]/back slash",
 			"manipulators":[
 				{
 					"type":"basic",

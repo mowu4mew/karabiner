@@ -2,7 +2,7 @@
   "title":"31/34.edit",
   "rules":[
     {
-      "description":"cut / copy / undo / redo / kill line /open line from Eisu & x / c / z / b / e / o",
+      "description":"cut / copy / undo / redo / kill line /open line from Eisu & x / c / z / b / e / period",
       "manipulators":[
         {
           "type":"basic",
