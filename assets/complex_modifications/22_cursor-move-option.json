@@ -1,8 +1,8 @@
 {
-  "title":"22/24.cursor move option",
+  "title":"22/23.cursor move option",
   "rules":[
     {
-      "description": "22/24.cursor move with option j / l / k / i / d / h ",
+      "description": "22/23.cursor move with option j / l / k / i / d / h ",
       "manipulators": [
         {
           "type": "basic",
@@ -22,7 +22,12 @@
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 2 }
+              "value": 1 },
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value":false
+            }
           ]
         },
         {
@@ -43,7 +48,12 @@
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 2 }
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":false
+              }
           ]
         },
         {
@@ -64,7 +74,12 @@
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 2 }
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":false
+              }
           ]
         },
         {
@@ -85,7 +100,12 @@
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 2 }
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":false
+              }
           ]
         },
         {
@@ -106,7 +126,12 @@
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 2 }
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":false
+              }
           ]
         },
         {
@@ -130,7 +155,128 @@
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 2 }
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":false
+              }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"left_arrow",
+              "modifiers":[
+                "option",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 },
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value":false
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"right_arrow",
+              "modifiers":[
+                "option",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":true
+              }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"up_arrow",
+              "modifiers":[
+                "option",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":true
+              }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers":{
+              "mandatory":["right_control"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"down_arrow",
+              "modifiers":[
+                "option",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 1 },
+              {
+                "type":"variable_if",
+                "name":"is_shift",
+                "value":true
+              }
           ]
         }
       ]

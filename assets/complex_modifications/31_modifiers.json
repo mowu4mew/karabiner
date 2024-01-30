@@ -2,7 +2,8 @@
   "title":"31/31.modifiers",
   "rules":[
     {
-      "description": "31/31.modifiers R_Control or eisuu / R_Option or kana / shift or space / param 1 or paste / param 2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
+
+      "description": "31/31.modifiers R_Control or eisuu / R_Option or kana / shift or space / isshift true or paste /  2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
       "manipulators": [
         {
           "type": "basic",
@@ -94,13 +95,13 @@
             "key_code": "v",
             "modifiers":{
               "mandatory":"right_control"
-            }
+            }           
           },
           "to": [
             { 
               "set_variable": {
-                 "name": "cursor_move",
-                  "value": 1,
+                 "name": "is_shift",
+                  "value": true,
                   "key_up_value":0
               }
             }
@@ -114,8 +115,58 @@
           "conditions": [
             {
               "type": "variable_if",
-              "name": "cursor_move",
-              "value": 0 
+              "name": "is_shift",
+              "value": false
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"v",
+            "modifiers":{
+              "mandatory":"right_option"
+            }
+          },
+          "to":[
+            {
+              "set_variable":{
+                "name":"is_shift",
+                "value":true,
+                "key_up_value":false
+              }
+            }
+          ],
+          "conditions":[
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value":false
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"m",
+            "modifiers":{
+              "mandatory":"right_option"
+            }
+          },
+          "to":[
+            {
+              "set_variable":{
+                "name":"is_shift",
+                "value":true,
+                "key_up_value":false
+              }
+            }
+          ],
+          "conditions":[
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value":false
             }
           ]
         },
@@ -131,7 +182,7 @@
             { 
               "set_variable": {
                  "name": "cursor_move",
-                  "value": 2,
+                  "value": 1,
                   "key_up_value":0
               }
             }
@@ -162,7 +213,7 @@
             { 
               "set_variable": {
                  "name": "cursor_move",
-                  "value": 3,
+                  "value": 2,
                   "key_up_value":0
               }
             }

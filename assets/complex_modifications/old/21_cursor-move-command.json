@@ -1,8 +1,8 @@
 {
-  "title":"24/24.cursor move",
+  "title":"21/24.cursor move command",
   "rules":[
     {
-      "description": "24/24.cursor move j / l / k / i / d / h",
+      "description": "21/24.cursor move with command j / l / k / i / d / h ",
       "manipulators": [
         {
           "type": "basic",
@@ -12,16 +12,17 @@
               "mandatory":["right_control"]
             }
           },
-           "to": [
+          "to": [
             { 
-              "key_code":"left_arrow"
+              "key_code":"left_arrow",
+              "modifiers":"command"
             }
           ],
           "conditions": [
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 0 }
+              "value": 3 }
           ]
         },
         {
@@ -32,16 +33,17 @@
               "mandatory":["right_control"]
             }
           },
-           "to": [
+          "to": [
             { 
-              "key_code":"right_arrow"
+              "key_code":"right_arrow",
+              "modifiers":"command"
             }
           ],
           "conditions": [
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 0 }
+              "value": 3 }
           ]
         },
         {
@@ -52,16 +54,17 @@
               "mandatory":["right_control"]
             }
           },
-           "to": [
+          "to": [
             { 
-              "key_code":"up_arrow"
+              "key_code":"up_arrow",
+              "modifiers":"command"
             }
           ],
           "conditions": [
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 0 }
+              "value": 3 }
           ]
         },
         {
@@ -72,60 +75,19 @@
               "mandatory":["right_control"]
             }
           },
-           "to": [
+          "to": [
             { 
-              "key_code":"down_arrow"
+              "key_code":"down_arrow",
+              "modifiers":"command"
             }
           ],
           "conditions": [
             { 
               "type": "variable_if",
               "name": "cursor_move",
-              "value": 0 }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "d",
-            "modifiers":{
-              "mandatory":["right_control"]
-            }
-          },
-           "to": [
-            { 
-              "key_code": "delete_or_backspace",
-              "modifiers": "fn"
-            }
-          ],
-          "conditions": [
-            { 
-              "type": "variable_if",
-              "name": "cursor_move",
-              "value": 0 }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "h",
-            "modifiers":{
-              "mandatory":["right_control"]
-            }
-          },
-           "to": [
-            { 
-              "key_code":"delete_or_backspace"
-            }
-          ],
-          "conditions": [
-            { 
-              "type": "variable_if",
-              "name": "cursor_move",
-              "value": 0 }
+              "value": 3 }
           ]
         }
-
       ]
     }
   ]

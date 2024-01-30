@@ -5,6 +5,31 @@
 			"description":"12/13.symbol-bottom  tilda/quote/[/(/)/]/semicolon/]/back slash from Kana + Z/X/C/V/B/N/M/comma/period/slash to tilda/quote/[/(/)/]/semicolon/]/back slash",
 			"manipulators":[
 				{
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers":{
+              "mandatory":"right_option"
+            }
+          },
+          "to": [
+            { 
+              "set_variable": {
+                 "name": "symbol_shift",
+                  "value": 1,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "symbol_shift",
+              "value": 0 
+            }
+          ]
+        },
+				{
 					"type":"basic",
 					"from":{
 						"key_code":"z",
@@ -18,7 +43,37 @@
 							"key_code":"equal_sign",
 							"modifiers":"shift"
 						}
-					]
+					],
+					"conditions": [
+            { 
+              "type": "variable_if",
+              "name": "symbol_shift",
+              "value": 0
+						}
+          ]
+				},
+				{
+					"type":"basic",
+					"from":{
+						"key_code":"z",
+						"modifiers":{
+							"mandatory":["right_option"],
+							"optional":["caps_lock"]
+						}
+					},
+					"to":[
+						{
+							"key_code":"open_bracket",
+							"modifiers":"shift"
+						}
+					],
+					"conditions": [
+            { 
+              "type": "variable_if",
+              "name": "symbol_shift",
+              "value": 1
+						}
+          ]
 				},
 				{
 					"type":"basic",
@@ -34,7 +89,14 @@
 							"key_code":"7",
 							"modifiers":"shift"
 						}
-					]
+					],
+					"conditions": [
+            { 
+              "type": "variable_if",
+              "name": "symbol_shift",
+              "value": 0
+						}
+          ]
 				},
 				{
 					"type":"basic",
@@ -49,7 +111,14 @@
 						{
 							"key_code":"close_bracket"
 						}
-					]
+					],
+					"conditions": [
+            { 
+              "type": "variable_if",
+              "name": "symbol_shift",
+              "value": 1
+						}
+          ]
 				},
 				{
 					"type":"basic",
