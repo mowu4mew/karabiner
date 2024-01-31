@@ -5,6 +5,29 @@
 
       "description": "31/31.modifiers R_Control or eisuu / R_Option or kana / shift or space / isshift true or paste /  2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
       "manipulators": [
+        { 
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "lazy":true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
@@ -66,29 +89,6 @@
             {"key_code": "return_or_enter"}
           ]
         },
-        { 
-          "type": "basic",
-          "from": {
-            "key_code": "spacebar",
-            "modifiers": {
-              "optional": ["any"]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_shift",
-              "lazy":true
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 200
-          },
-          "to_if_alone": [
-            {
-              "key_code": "spacebar"
-            }
-          ]
-        },
         {
           "type": "basic",
           "from": {
@@ -101,8 +101,8 @@
             { 
               "set_variable": {
                  "name": "is_shift",
-                  "value": true,
-                  "key_up_value":false
+                  "value": 1,
+                  "key_up_value":0
               }
             }
           ],
@@ -116,7 +116,7 @@
             {
               "type": "variable_if",
               "name": "is_shift",
-              "value": false
+              "value": 0
             }
           ]
         },
@@ -132,8 +132,8 @@
             {
               "set_variable":{
                 "name":"is_shift",
-                "value":true,
-                "key_up_value":false
+                "value":1,
+                "key_up_value":0
               }
             }
           ],
@@ -141,7 +141,7 @@
             {
               "type":"variable_if",
               "name":"is_shift",
-              "value":false
+              "value":0
             }
           ]
         },
@@ -157,8 +157,8 @@
             {
               "set_variable":{
                 "name":"is_shift",
-                "value":true,
-                "key_up_value":false
+                "value":1,
+                "key_up_value":0
               }
             }
           ],
@@ -166,7 +166,7 @@
             {
               "type":"variable_if",
               "name":"is_shift",
-              "value":false
+              "value":0
             }
           ]
         },
