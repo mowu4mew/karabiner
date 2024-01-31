@@ -132,7 +132,7 @@
             {
               "set_variable":{
                 "name":"is_shift",
-                "value":1,
+                "value": 1,
                 "key_up_value":0
               }
             }
@@ -141,7 +141,7 @@
             {
               "type":"variable_if",
               "name":"is_shift",
-              "value":0
+              "value": 0
             }
           ]
         },
@@ -157,7 +157,7 @@
             {
               "set_variable":{
                 "name":"is_shift",
-                "value":1,
+                "value": 1,
                 "key_up_value":0
               }
             }
@@ -166,7 +166,7 @@
             {
               "type":"variable_if",
               "name":"is_shift",
-              "value":0
+              "value": 0
             }
           ]
         },
