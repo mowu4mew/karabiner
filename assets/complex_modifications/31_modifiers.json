@@ -102,7 +102,7 @@
               "set_variable": {
                  "name": "is_shift",
                   "value": true,
-                  "key_up_value":0
+                  "key_up_value":false
               }
             }
           ],
