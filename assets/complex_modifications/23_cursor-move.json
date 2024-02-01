@@ -120,7 +120,7 @@
           "to": [
             { 
               "key_code":"delete_or_backspace",
-              "modifiers":"fn"
+              "modifiers":["fn"]
             }
           ],
           "conditions": [
@@ -168,7 +168,7 @@
            "to": [
             { 
               "key_code":"left_arrow",
-              "modifiers":"shift"
+              "modifiers":["shift"]
             }
           ],
           "conditions": [
@@ -195,7 +195,7 @@
            "to": [
             { 
               "key_code":"right_arrow",
-              "modifiers":"shift"
+              "modifiers":["shift"]
             }
           ],
           "conditions": [
@@ -222,7 +222,7 @@
            "to": [
             { 
               "key_code":"up_arrow",
-              "modifiers":"shift"
+              "modifiers":["shift"]
             }
           ],
           "conditions": [
@@ -249,7 +249,7 @@
            "to": [
             { 
               "key_code":"down_arrow",
-              "modifiers":"shift"
+              "modifiers":["shift"]
             }
           ],
           "conditions": [
