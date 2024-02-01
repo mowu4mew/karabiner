@@ -1,8 +1,9 @@
 {
-  "title":"34/34.modifiers-cursorparam",
+  "title":"32/32.modifiers",
   "rules":[
     {
-      "description": "R_Control / R_Option / param 1 or paste / param 2 / param 3 or sel all from eisu / kana / space / v / m / a",
+
+      "description": "32/32.modifiers R_Control or eisuu / R_Option or kana / shift or space / isshift true or paste /  2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
       "manipulators": [
         { 
           "type": "basic",
@@ -32,9 +33,7 @@
           "from": {
             "key_code":"japanese_eisuu",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [
@@ -49,21 +48,6 @@
           "to_if_alone":[
             {
               "key_code":"spacebar"
-            }
-          ]
-        },
-        {
-          "from":{
-            "key_code":"Left_control",
-            "modifiers":{
-              "mandatory":["right_control"],
-              "optional":["caps_lock"]
-            }
-          },
-          "to":[
-            {
-              "key_code":"",
-              "modifiers":["command"]
             }
           ]
         },
@@ -93,7 +77,92 @@
           "from": {
             "key_code": "v",
             "modifiers":{
-              "mandatory":"right_control"
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
+            }           
+          },
+          "to": [
+            { 
+              "set_variable": {
+                 "name": "is_shift",
+                  "value": 1,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code":"v",
+              "modifiers":["command"]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "is_shift",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"v",
+            "modifiers":{
+              "mandatory":["right_option"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "set_variable":{
+                "name":"is_shift",
+                "value": 1,
+                "key_up_value":0
+              }
+            }
+          ],
+          "conditions":[
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"m",
+            "modifiers":{
+              "mandatory":["right_option"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "set_variable":{
+                "name":"is_shift",
+                "value": 1,
+                "key_up_value":0
+              }
+            }
+          ],
+          "conditions":[
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers":{
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
           "to": [
@@ -107,39 +176,8 @@
           ],
           "to_if_alone": [
             {
-              "key_code":"v",
-              "modifiers":"command"
-            }
-          ],
-          "conditions": [
-            {
-              "type": "variable_if",
-              "name": "cursor_move",
-              "value": 0 
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "a",
-            "modifiers":{
-              "mandatory":"right_control"
-            }
-          },
-          "to": [
-            { 
-              "set_variable": {
-                 "name": "cursor_move",
-                  "value": 2,
-                  "key_up_value":0
-              }
-            }
-          ],
-          "to_if_alone": [
-            {
               "key_code":"a",
-              "modifiers":"command"
+              "modifiers":["command"]
             }
           ],
           "conditions": [
@@ -155,21 +193,17 @@
           "from": {
             "key_code": "semicolon",
             "modifiers":{
-              "mandatory":"right_control"
+              "mandatory":["right_control"],
+              "optional":["caps_lock"] 
             }
           },
           "to": [
             { 
               "set_variable": {
                  "name": "cursor_move",
-                  "value": 3,
+                  "value": 2,
                   "key_up_value":0
               }
-            }
-          ],
-          "to_if_alone": [
-            {
-              "key_code":"fn"
             }
           ],
           "conditions": [

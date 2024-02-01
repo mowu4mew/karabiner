@@ -1,0 +1,180 @@
+{
+  "title":"01/03.keyswap",
+  "rules":[
+    {
+      "description": "01/03.keyswapeisu / kana / tab / esc / print screen / minus / hyphen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' / semicolon / &shift",
+      "manipulators": [
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"left_command",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"left_command",
+              "lazy":true
+            }
+          ],
+          "to_if_alone":[
+            {
+              "key_code":"japanese_eisuu"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"right_command",
+            "modifiers":{
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"right_command",
+              "lazy":true
+            }
+          ],
+          "to_if_alone":[
+            {
+              "key_code":"japanese_kana"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "l" },
+              { "key_code": "k" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"japanese_kana"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "s" },
+              { "key_code": "d" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"japanese_eisuu"
+            }
+          ]
+        },
+        {
+					"type": "basic",
+					"from": {
+            "key_code": "semicolon",
+						"modifiers":{
+							"optional": [
+							]
+						}
+    			},
+    			"to":[
+						{"key_code": "hyphen"}
+					]
+				},
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"semicolon",
+            "modifiers":{
+              "optional":
+              [
+								"shift",
+								"caps_lock"               
+							]
+            }
+          },
+          "to":[
+            {"key_code":"international1"}
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "j" },
+              { "key_code": "k" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"tab"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"comma",
+            "modifiers":{
+              "mandatory":["right_control"],
+              "optional":["any"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"tab"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "d" },
+              { "key_code": "f" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"escape"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from": {
+            "simultaneous": [
+              { "key_code": "w" },
+              { "key_code": "e" }
+            ],
+            "modifiers":{
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"4",
+              "modifiers":["command","shift"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

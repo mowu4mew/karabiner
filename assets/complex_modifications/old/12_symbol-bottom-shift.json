@@ -16,7 +16,7 @@
 					"to":[
 						{
 							"key_code":"equal_sign",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -38,7 +38,7 @@
 					"to":[
 						{
 							"key_code":"open_bracket",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -61,7 +61,7 @@
 					"to":[
 						{
 							"key_code":"7",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -84,7 +84,7 @@
 					"to":[
 						{
 							"key_code":"2",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -129,7 +129,7 @@
 					"to":[
 						{
 							"key_code":"close_bracket",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -151,49 +151,6 @@
 					},
 					"to":[
 							{"key_code":"vk_none"}
-					],
-					"conditions": [
-					  {
-						"type":"variable_if",
-						"name":"is_shift",
-						"value": 0
-					  }
-					]
-				},
-				{
-					"type":"basic",
-					"from":{
-						"key_code":"v",
-						"modifiers":{
-							"mandatory":["right_option"],
-							"optional":["caps_lock"]
-						}
-					},
-					"to":[
-							{"key_code":"vk_none"}
-					],
-					"conditions": [
-					  {
-						"type":"variable_if",
-						"name":"is_shift",
-						"value": 1
-					  }
-					]
-				},
-				{
-					"type":"basic",
-					"from":{
-						"key_code":"b",
-						"modifiers":{
-							"mandatory":["right_option"],
-							"optional":["caps_lock"]
-						}
-					},
-					"to":[
-						{
-							"key_code":"8",
-							"modifiers":["shift"]
-						}
 					],
 					"conditions": [
 					  {
@@ -214,14 +171,15 @@
 					},
 					"to":[
 						{
-							"key_code":"vk_none"
+							"key_code":"8",
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
 					  {
 						"type":"variable_if",
 						"name":"is_shift",
-						"value": 1
+						"value": 0
 					  }
 					]
 				},
@@ -231,13 +189,13 @@
 						"key_code":"n",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":["caps_lock"]
+							"optional":["any"]
 						}
 					},
 					"to":[
 						{
 							"key_code":"9",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -245,28 +203,6 @@
 						"type":"variable_if",
 						"name":"is_shift",
 						"value": 0
-					  }
-					]
-				},
-				{
-					"type":"basic",
-					"from":{
-						"key_code":"n",
-						"modifiers":{
-							"mandatory":["right_option"],
-							"optional":["caps_lock"]
-						}
-					},
-					"to":[
-						{
-							"key_code":"vk_none"
-						}
-					],
-					"conditions": [
-					  {
-						"type":"variable_if",
-						"name":"is_shift",
-						"value": 1
 					  }
 					]
 				},				
@@ -276,7 +212,7 @@
 						"key_code":"m",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":["caps_lock"]
+							"optional":["any"]
 						}
 					},
 					"to":[
@@ -289,28 +225,6 @@
 						"type":"variable_if",
 						"name":"is_shift",
 						"value": 0
-					  }
-					]
-				},
-				{
-					"type":"basic",
-					"from":{
-						"key_code":"m",
-						"modifiers":{
-							"mandatory":["right_option"],
-							"optional":["caps_lock"]
-						}
-					},
-					"to":[
-						{
-							"key_code":"vk_none"
-						}
-					],
-					"conditions": [
-					  {
-						"type":"variable_if",
-						"name":"is_shift",
-						"value": 1
 					  }
 					]
 				},
@@ -348,7 +262,7 @@
 					"to":[
 						{
 							"key_code":"backslash",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [
@@ -437,7 +351,7 @@
 					"to":[
 						{
 							"key_code":"international3",
-							"modifiers":["shift"]
+							"modifiers":"shift"
 						}
 					],
 					"conditions": [

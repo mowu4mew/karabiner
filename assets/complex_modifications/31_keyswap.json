@@ -1,8 +1,8 @@
 {
-  "title":"01/03.keyswap",
+  "title":"31/32.keyswap",
   "rules":[
     {
-      "description": "01/03.keyswapeisu / kana / tab / esc / print screen / minus / hyphen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' / semicolon / &shift",
+      "description": "31/32.keyswapeisu / kana / tab / esc / print screen / minus / hyphen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' / semicolon / &shift",
       "manipulators": [
         {
           "type":"basic",
@@ -191,7 +191,7 @@
             { 
               "type": "frontmost_aplication_if",
               "bundle_identifiers":[
-                "^com\\.apple\\.finders"
+                "^com\\.apple\\.finder$"
               ]
             }
           ]
