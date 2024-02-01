@@ -9,7 +9,8 @@
           "from": {
             "key_code": "j",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -34,7 +35,8 @@
           "from": {
             "key_code": "l",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -59,7 +61,8 @@
           "from": {
             "key_code": "i",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -84,7 +87,8 @@
           "from": {
             "key_code": "k",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -109,7 +113,8 @@
           "from": {
             "key_code": "d",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
           "to": [
@@ -130,7 +135,8 @@
           "from": {
             "key_code": "h",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
           "to": [
@@ -155,7 +161,8 @@
           "from": {
             "key_code": "j",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -181,7 +188,8 @@
           "from": {
             "key_code": "l",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -207,7 +215,8 @@
           "from": {
             "key_code": "i",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [
@@ -233,7 +242,8 @@
           "from": {
             "key_code": "k",
             "modifiers":{
-              "mandatory":["right_control"]
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
             }
           },
            "to": [

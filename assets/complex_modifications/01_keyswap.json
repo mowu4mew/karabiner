@@ -83,12 +83,13 @@
 					"from": {
             "key_code": "semicolon",
 						"modifiers":{
-							"optional": [
-							]
+							"optional": ["caps_lock"]
 						}
     			},
     			"to":[
-						{"key_code": "hyphen"}
+						{
+              "key_code": "hyphen"
+            }
 					]
 				},
         {
@@ -96,11 +97,8 @@
           "from":{
             "key_code":"semicolon",
             "modifiers":{
-              "optional":
-              [
-								"shift",
-								"caps_lock"               
-							]
+              "mandatory":"shift",
+							"optional":"caps_lock"               
             }
           },
           "to":[
@@ -130,7 +128,7 @@
             "key_code":"comma",
             "modifiers":{
               "mandatory":["right_control"],
-              "optional":["any"]
+              "optional":["caps_lock"]
             }
           },
           "to":[
@@ -171,6 +169,30 @@
             {
               "key_code":"4",
               "modifiers":["command","shift"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers":{
+              "mandatory":["right_control"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to": [
+            { 
+              "key_code":"delete_or_backspace",
+              "modifiers":["command"]
+            }
+          ],
+          "conditions": [
+            { 
+              "type": "frontmost_aplication_if",
+              "bundle_identifiers":[
+                "^com\\.apple\\.finders"
+              ]
             }
           ]
         }

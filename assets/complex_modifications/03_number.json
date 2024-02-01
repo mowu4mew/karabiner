@@ -10,10 +10,7 @@
 						"key_code":"left_control",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -28,10 +25,7 @@
 						"key_code":"a",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -46,10 +40,7 @@
 						"key_code":"s",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -64,10 +55,7 @@
 						"key_code":"d",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -82,10 +70,7 @@
 						"key_code":"f",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -100,10 +85,7 @@
 						"key_code":"g",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -118,10 +100,7 @@
 						"key_code":"h",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -136,10 +115,7 @@
 						"key_code":"j",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -154,10 +130,7 @@
 						"key_code":"k",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -172,10 +145,7 @@
 						"key_code":"l",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
@@ -190,10 +160,7 @@
 						"key_code":"semicolon",
 						"modifiers":{
 							"mandatory":["right_option"],
-							"optional":[
-								"caps_lock",
-								"shift"
-							]
+							"optional":["caps_lock"]
 						}
 					},
 					"to":[
