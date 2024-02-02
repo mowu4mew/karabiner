@@ -15,7 +15,7 @@
           },
           "to": [
             {
-              "key_code": "shift",
+              "key_code": "right_shift",
               "lazy":true
             }
           ],
