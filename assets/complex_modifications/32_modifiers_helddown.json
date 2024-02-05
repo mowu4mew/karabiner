@@ -1,0 +1,213 @@
+{
+  "title":"32/32.modifiers",
+  "rules":[
+    {
+
+      "description": "32/32.modifiers R_Control or eisuu / R_Option or kana / shift or space / isshift true or paste /  2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
+      "manipulators": [
+        { 
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_shift",
+              "lazy":true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "to_if_alone": [
+            {
+              "key_code": "spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code":"japanese_eisuu",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_control",
+              "lazy": true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "to_if_alone":[
+            {
+              "key_code":"spacebar"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_kana",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "lazy":true
+            }
+          ],
+          "parameters": {
+            "basic.to_if_alone_timeout_milliseconds": 200
+          },
+          "to_if_alone": [
+            {"key_code": "return_or_enter"}
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers":{
+              "optional":["caps_lock","right_control"]
+            }           
+          },
+          "to_if_held_down": [
+            { 
+              "set_variable": {
+                 "name": "is_shift",
+                  "value": 1,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code":"v"              
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "is_shift",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"v",
+            "modifiers":{
+              "optional":["caps_lock","right_control"]
+            }
+          },
+          "to_if_held_down":[
+            {
+              "set_variable":{
+                "name":"is_shift",
+                "value": 1,
+                "key_up_value":0
+              }
+            }
+          ],
+          "conditions":[
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"m",
+            "modifiers":{
+              "optional":["caps_lock","right_control"]
+            }
+          },
+          "to_if_held_down":[
+            {
+              "set_variable":{
+                "name":"is_shift",
+                "value": 1,
+                "key_up_value":0
+              }
+            }
+          ],
+          "conditions":[
+            {
+              "type":"variable_if",
+              "name":"is_shift",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers":{
+              "optional":["caps_lock","right_control"]
+            }
+          },
+          "to_if_held_down": [
+            { 
+              "set_variable": {
+                 "name": "cursor_move",
+                  "value": 1,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code":"a"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers":{
+              "optional":["caps_lock","right_control"] 
+            }
+          },
+          "to_if_held_down": [
+            { 
+              "set_variable": {
+                 "name": "cursor_move",
+                  "value": 2,
+                  "key_up_value":0
+              }
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "cursor_move",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
