@@ -1,9 +1,9 @@
 {
-  "title":"32/32.modifiers&keyswap semicolon",
+  "title":"32/32.modifiers-helddown",
   "rules":[
     {
 
-      "description": "32/32.modifiers R_Control or eisuu / R_Option or kana / shift or space / isshift true or paste /  2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
+      "description": "32/32.modifiers_helddown R_Control or eisuu / R_Option or kana / shift or space / isshift true or paste /  2 or fn / param 3 or sel all :from eisu / kana / space / v / semicolon / a",
       "manipulators": [
         { 
           "type": "basic",
@@ -20,7 +20,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 200
+            "basic.to_if_alone_timeout_milliseconds": 150
           },
           "to_if_alone": [
             {
@@ -43,7 +43,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 200
+            "basic.to_if_alone_timeout_milliseconds": 150
           },
           "to_if_alone":[
             {
@@ -66,7 +66,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 200
+            "basic.to_if_alone_timeout_milliseconds": 150
           },
           "to_if_alone": [
             {"key_code": "return_or_enter"}
@@ -80,7 +80,7 @@
               "optional":["caps_lock","right_control"]
             }           
           },
-          "to": [
+          "to_if_held_down": [
             { 
               "set_variable": {
                  "name": "is_shift",
@@ -110,7 +110,7 @@
               "optional":["caps_lock","right_control"]
             }
           },
-          "to":[
+          "to_if_held_down":[
             {
               "set_variable":{
                 "name":"is_shift",
@@ -132,10 +132,10 @@
           "from":{
             "key_code":"m",
             "modifiers":{
-              "optional":["caps_lock","right_option"]
+              "optional":["caps_lock","right_control"]
             }
           },
-          "to":[
+          "to_if_held_down":[
             {
               "set_variable":{
                 "name":"is_shift",
@@ -144,10 +144,8 @@
               }
             }
           ],
-          "to_if_alone":[
-            {
-              "key_code":"m"
-            }
+          "to":[
+            
           ],
           "conditions":[
             {
@@ -165,7 +163,7 @@
               "optional":["caps_lock","right_control"]
             }
           },
-          "to": [
+          "to_if_held_down": [
             { 
               "set_variable": {
                  "name": "cursor_move",
@@ -195,7 +193,7 @@
               "optional":["caps_lock","right_control"] 
             }
           },
-          "to": [
+          "to_if_held_down": [
             { 
               "set_variable": {
                  "name": "cursor_move",
@@ -204,30 +202,12 @@
               }
             }
           ],
-          "to_if_alone":[
-            {
-              "key_code":"hyphen"
-            }
-          ],
           "conditions": [
             {
               "type": "variable_if",
               "name": "cursor_move",
               "value": 0
             }
-          ]
-        },
-        {
-          "type":"basic",
-          "from":{
-            "key_code":"semicolon",
-            "modifiers":{
-              "mandatory":"shift",
-							"optional":"caps_lock"               
-            }
-          },
-          "to":[
-            {"key_code":"international1"}
           ]
         }
       ]
