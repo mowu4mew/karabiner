@@ -1,8 +1,8 @@
 {
-  "title":"31/32.keyswap",
+  "title":"02/03.keyswap",
   "rules":[
     {
-      "description": "31/32.keyswapeisu / kana / tab / esc / print screen from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e'",
+      "description": "02/03.keyswap eisu / kana / tab / esc / print screen / hyphen underscore from L-command or 's&d' / r-command or 'l&k' / 'kana&comma' or 'j&k' / 'd&f' / 'w&e' / semicolon (shift)",
       "manipulators": [
         {
           "type":"basic",
@@ -142,6 +142,35 @@
             {
               "key_code":"4",
               "modifiers":["command","shift"]
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"semicolon",
+            "modifiers":{
+              "mandatory":["shift"],
+              "optional":["caps_lock"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"international1"
+            }
+          ]
+        },
+        {
+          "type":"basic",
+          "from":{
+            "key_code":"semicolon",
+            "modifiers":{
+              "optional":["caps_lock","shift","right_option"]
+            }
+          },
+          "to":[
+            {
+              "key_code":"hyphen"
             }
           ]
         },

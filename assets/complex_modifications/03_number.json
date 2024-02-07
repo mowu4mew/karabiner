@@ -1,8 +1,8 @@
 {
-  "title":"02/02.number",
+  "title":"03/03.number",
   "rules":[
     {
-      "description":"02/02. number  [1-0] from Kana A , S , D , F , G , H , J , K , L ",
+      "description":"03/03. number  [1-0] from Kana A , S , D , F , G , H , J , K , L ",
       "manipulators":[
 				{
 					"type":"basic",
@@ -157,7 +157,7 @@
 				{
 					"type":"basic",
 					"from":{
-						"key_code":"hypehn",
+						"key_code":"semicolon",
 						"modifiers":{
 							"mandatory":["right_option"],
 							"optional":["caps_lock"]
